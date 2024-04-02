@@ -1,0 +1,15 @@
+variable "bucket_name" {}
+variable "bucket_logging_fe_name" {}
+variable "cloudfront_distribution_id" {}
+variable "counter_table_name" {}
+variable "github_actions_role_fe_policy" {}
+variable "github_actions_url" {}
+variable "iam_role_name" {}
+variable "iam_user_name" {}
+variable "origin_access_control_id" {}
+variable "region" {}
+variable "root_domain" {}
+variable "route53_zone_id" {}
+variable "s3_website_log_bucket_name" {}
+variable "table_name" {}
+variable "terraform_frontend_policy" {}

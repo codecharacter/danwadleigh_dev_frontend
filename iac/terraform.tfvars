@@ -1,0 +1,17 @@
+bucket_name                   = "tf-state-bucket-dw-frontend"
+bucket_logging_fe_name        = "logging-tf-state-fe"
+counter_table_name            = "danwadleigh-dev-counter"
+dns_record_ttl                = 300
+force_destroy                 = false
+github_actions_role_fe_policy = "github-actions-role-fe-policy"
+github_actions_url            = "token.actions.githubusercontent.com"
+http_api_stage_name           = "prod"
+iam_role_name                 = "GitHubActionsRole-frontend"
+iam_user_name                 = "terraform_frontend"
+index_document                = "index.html"
+region                        = "us-east-1"
+root_domain                   = "danwadleigh.dev"
+table_name                    = "tf_state_locks_dw_frontend"
+terraform_frontend_policy     = "terraform_frontend_policy"
+versioning_enabled            = "Enabled"
+website_bucket                = "danwadleigh.dev"
