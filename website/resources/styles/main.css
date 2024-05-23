@@ -114,6 +114,9 @@ ul {
   list-style-type: none;
 }
 
+#project ul {
+  list-style-type: circle;
+}
 #resume ul {
   list-style-type: circle;
 }
