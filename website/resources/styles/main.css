@@ -114,11 +114,15 @@ ul {
   list-style-type: none;
 }
 
-#project ul {
+#projects ul {
   list-style-type: circle;
 }
 
 #resume ul {
+  list-style-type: circle;
+}
+
+#military ul {
   list-style-type: circle;
 }
 
