@@ -114,6 +114,10 @@ ul {
   list-style-type: none;
 }
 
+span {
+  font-weight: bold;
+}
+
 #projects ul {
   list-style-type: circle;
 }
