@@ -37,7 +37,7 @@
     "blob-util": "^2.0.2",
     "bluebird": "^3.7.2",
     "brace-expansion": "^1.1.11",
-    "braces": "^3.0.2",
+    "braces": "^3.0.3",
     "buffer": "^5.7.1",
     "buffer-crc32": "^0.2.13",
     "cachedir": "^2.4.0",
