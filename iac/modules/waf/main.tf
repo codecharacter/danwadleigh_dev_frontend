@@ -284,6 +284,7 @@ resource "aws_wafv2_web_acl" "waf_web_acl" {
 # }
 
 # TF Docs: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group
+#tfsec:ignore:aws-cloudwatch-log-group-customer-key
 resource "aws_cloudwatch_log_group" "waf_web_acl_log_group" {
   name              = "aws-waf-logs-wafv2-web-acl-cloudfront"
   retention_in_days = 30
