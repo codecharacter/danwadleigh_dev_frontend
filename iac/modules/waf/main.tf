@@ -73,73 +73,73 @@ resource "aws_wafv2_web_acl" "waf_web_acl" {
     }
   }
 
-  rule {
-    name     = "AWS-AWSManagedRulesLinuxRuleSet"
-    priority = 1
-    override_action {
-      none {
-      }
-    }
-    statement {
-      managed_rule_group_statement {
-        name        = "AWSManagedRulesLinuxRuleSet"
-        vendor_name = "AWS"
-      }
-    }
-    visibility_config {
-      cloudwatch_metrics_enabled = true
-      metric_name                = "AWS-AWSManagedRulesLinuxRuleSet"
-      sampled_requests_enabled   = true
-    }
-  }
+  # rule {
+  #   name     = "AWS-AWSManagedRulesLinuxRuleSet"
+  #   priority = 1
+  #   override_action {
+  #     none {
+  #     }
+  #   }
+  #   statement {
+  #     managed_rule_group_statement {
+  #       name        = "AWSManagedRulesLinuxRuleSet"
+  #       vendor_name = "AWS"
+  #     }
+  #   }
+  #   visibility_config {
+  #     cloudwatch_metrics_enabled = true
+  #     metric_name                = "AWS-AWSManagedRulesLinuxRuleSet"
+  #     sampled_requests_enabled   = true
+  #   }
+  # }
 
-  rule {
-    name     = "AWS-AWSManagedRulesAmazonIpReputationList"
-    priority = 2
-    override_action {
-      none {
-      }
-    }
-    statement {
-      managed_rule_group_statement {
-        name        = "AWSManagedRulesAmazonIpReputationList"
-        vendor_name = "AWS"
-      }
-    }
-    visibility_config {
-      cloudwatch_metrics_enabled = true
-      metric_name                = "AWS-AWSManagedRulesAmazonIpReputationList"
-      sampled_requests_enabled   = true
-    }
-  }
+  # rule {
+  #   name     = "AWS-AWSManagedRulesAmazonIpReputationList"
+  #   priority = 2
+  #   override_action {
+  #     none {
+  #     }
+  #   }
+  #   statement {
+  #     managed_rule_group_statement {
+  #       name        = "AWSManagedRulesAmazonIpReputationList"
+  #       vendor_name = "AWS"
+  #     }
+  #   }
+  #   visibility_config {
+  #     cloudwatch_metrics_enabled = true
+  #     metric_name                = "AWS-AWSManagedRulesAmazonIpReputationList"
+  #     sampled_requests_enabled   = true
+  #   }
+  # }
 
-  rule {
-    name     = "AWS-AWSManagedRulesAnonymousIpList"
-    priority = 3
-    override_action {
-      none {
-      }
-    }
-    statement {
-      managed_rule_group_statement {
-        name        = "AWSManagedRulesAnonymousIpList"
-        vendor_name = "AWS"
+  # rule {
+  #   name     = "AWS-AWSManagedRulesAnonymousIpList"
+  #   priority = 3
+  #   override_action {
+  #     none {
+  #     }
+  #   }
+  #   statement {
+  #     managed_rule_group_statement {
+  #       name        = "AWSManagedRulesAnonymousIpList"
+  #       vendor_name = "AWS"
 
-        rule_action_override {
-          action_to_use {
-            allow {}
-          }
+  #       rule_action_override {
+  #         action_to_use {
+  #           allow {}
+  #         }
 
-          name = "HostingProviderIPList"
-        }
-      }
-    }
-    visibility_config {
-      cloudwatch_metrics_enabled = true
-      metric_name                = "AWS-AWSManagedRulesAnonymousIpList"
-      sampled_requests_enabled   = true
-    }
-  }
+  #         name = "HostingProviderIPList"
+  #       }
+  #     }
+  #   }
+  #   visibility_config {
+  #     cloudwatch_metrics_enabled = true
+  #     metric_name                = "AWS-AWSManagedRulesAnonymousIpList"
+  #     sampled_requests_enabled   = true
+  #   }
+  # }
 
   rule {
     name     = "AWS-AWSManagedRulesKnownBadInputsRuleSet"
@@ -161,25 +161,25 @@ resource "aws_wafv2_web_acl" "waf_web_acl" {
     }
   }
 
-  rule {
-    name     = "AWS-AWSManagedRulesUnixRuleSet"
-    priority = 5
-    override_action {
-      none {
-      }
-    }
-    statement {
-      managed_rule_group_statement {
-        name        = "AWSManagedRulesUnixRuleSet"
-        vendor_name = "AWS"
-      }
-    }
-    visibility_config {
-      cloudwatch_metrics_enabled = true
-      metric_name                = "AWS-AWSManagedRulesUnixRuleSet"
-      sampled_requests_enabled   = true
-    }
-  }
+  # rule {
+  #   name     = "AWS-AWSManagedRulesUnixRuleSet"
+  #   priority = 5
+  #   override_action {
+  #     none {
+  #     }
+  #   }
+  #   statement {
+  #     managed_rule_group_statement {
+  #       name        = "AWSManagedRulesUnixRuleSet"
+  #       vendor_name = "AWS"
+  #     }
+  #   }
+  #   visibility_config {
+  #     cloudwatch_metrics_enabled = true
+  #     metric_name                = "AWS-AWSManagedRulesUnixRuleSet"
+  #     sampled_requests_enabled   = true
+  #   }
+  # }
 
   # rule {
   #   name     = "AWS-AWSManagedRulesWindowsRuleSet"
@@ -208,25 +208,25 @@ resource "aws_wafv2_web_acl" "waf_web_acl" {
   #   }
   # }
 
-  rule {
-    name     = "AWS-AWSManagedRulesBotControlRuleSet"
-    priority = 7
-    override_action {
-      none {
-      }
-    }
-    statement {
-      managed_rule_group_statement {
-        name        = "AWSManagedRulesBotControlRuleSet"
-        vendor_name = "AWS"
-      }
-    }
-    visibility_config {
-      cloudwatch_metrics_enabled = true
-      metric_name                = "AWS-AWSManagedRulesBotControlRuleSet"
-      sampled_requests_enabled   = true
-    }
-  }
+  # rule {
+  #   name     = "AWS-AWSManagedRulesBotControlRuleSet"
+  #   priority = 7
+  #   override_action {
+  #     none {
+  #     }
+  #   }
+  #   statement {
+  #     managed_rule_group_statement {
+  #       name        = "AWSManagedRulesBotControlRuleSet"
+  #       vendor_name = "AWS"
+  #     }
+  #   }
+  #   visibility_config {
+  #     cloudwatch_metrics_enabled = true
+  #     metric_name                = "AWS-AWSManagedRulesBotControlRuleSet"
+  #     sampled_requests_enabled   = true
+  #   }
+  # }
 
   rule {
     name     = "CF-RateLimit"
@@ -251,43 +251,43 @@ resource "aws_wafv2_web_acl" "waf_web_acl" {
 }
 
 # TF Docs: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key 
-resource "aws_kms_key" "cloudwatch_kms_waf" {
-  description         = "cloudwatch_kms_waf"
-  enable_key_rotation = true
+# resource "aws_kms_key" "cloudwatch_kms_waf" {
+#   description         = "cloudwatch_kms_waf"
+#   enable_key_rotation = true
 
-  policy = jsonencode({
-    "Version" : "2012-10-17",
-    "Id" : "default",
-    "Statement" : [
-      {
-        "Sid" : "DefaultAllow",
-        "Effect" : "Allow",
-        "Principal" : {
-          "AWS" : "arn:aws:iam::${local.account_id}:root"
-        },
-        "Action" : "kms:*",
-        "Resource" : "*"
+#   policy = jsonencode({
+#     "Version" : "2012-10-17",
+#     "Id" : "default",
+#     "Statement" : [
+#       {
+#         "Sid" : "DefaultAllow",
+#         "Effect" : "Allow",
+#         "Principal" : {
+#           "AWS" : "arn:aws:iam::${local.account_id}:root"
+#         },
+#         "Action" : "kms:*",
+#         "Resource" : "*"
 
-      },
-      {
-        Effect = "Allow"
-        Principal = {
-          Service = "logs.${var.region}.amazonaws.com"
-        }
-        Action = [
-          "kms:*"
-        ]
-        Resource = "*"
-      }
-    ]
-  })
-}
+#       },
+#       {
+#         Effect = "Allow"
+#         Principal = {
+#           Service = "logs.${var.region}.amazonaws.com"
+#         }
+#         Action = [
+#           "kms:*"
+#         ]
+#         Resource = "*"
+#       }
+#     ]
+#   })
+# }
 
 # TF Docs: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group
 resource "aws_cloudwatch_log_group" "waf_web_acl_log_group" {
   name              = "aws-waf-logs-wafv2-web-acl-cloudfront"
   retention_in_days = 30
-  kms_key_id        = aws_kms_key.cloudwatch_kms_waf.arn
+  #kms_key_id        = aws_kms_key.cloudwatch_kms_waf.arn
 }
 
 # TF Docs: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/wafv2_web_acl_logging_configuration
